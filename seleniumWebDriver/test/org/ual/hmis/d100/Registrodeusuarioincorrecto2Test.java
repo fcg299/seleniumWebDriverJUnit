@@ -16,6 +16,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import org.openqa.selenium.interactions.Actions;
@@ -30,10 +32,12 @@ public class Registrodeusuarioincorrecto2Test {
 	public void setUp() {
 		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-		ChromeOptions chromeOptions = new ChromeOptions();
-		chromeOptions.setHeadless(true);
-		driver = new ChromeDriver(chromeOptions); // new
-													// ChromeDriver();
+		
+		FirefoxOptions firefoxOptions = new FirefoxOptions(); 
+	    firefoxOptions.setHeadless(true); 
+	    driver = new FirefoxDriver(firefoxOptions);
+
+
 		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
 	}
