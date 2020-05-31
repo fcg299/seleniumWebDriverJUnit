@@ -18,8 +18,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import com.gargoylesoftware.htmlunit.BrowserVersion;
 
 @SuppressWarnings("unused")
 public class CambiarcontraseacorrectoTest {
@@ -29,13 +27,11 @@ public class CambiarcontraseacorrectoTest {
 
 	@Before
 	public void setUp() {
-		System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-		FirefoxOptions firefoxOptions = new FirefoxOptions(); 
-	    firefoxOptions.setHeadless(true); 
-	    driver = new FirefoxDriver(firefoxOptions);
-
-
+		 // System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
+		 // System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+		FirefoxOptions firefoxOptions = new FirefoxOptions();
+		firefoxOptions.setHeadless(true);
+		driver = new FirefoxDriver(firefoxOptions);
 
 		js = (JavascriptExecutor) driver;
 		vars = new HashMap<String, Object>();
